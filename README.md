@@ -1,6 +1,7 @@
-# Nome do projeto
+# Fit Flex
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+O Fit Flex tem como objetivo facilitar a substituição de alimentos em uma dieta . 
+Nossa solução consiste em criar uma nova dieta para a persona baseada em seus objetivos de forma interativa e personalizada.
 
 ## Alunos integrantes da equipe
 
