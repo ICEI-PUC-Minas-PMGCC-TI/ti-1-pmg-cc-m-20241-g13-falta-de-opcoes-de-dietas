@@ -9,6 +9,7 @@ fetch("db.json").then((response) => {
 
         mensagensFiltradas.forEach((mensagem) => {
             const itemLista = document.createElement("li");
+            itemLista.classList.add("mensagem-comentario");
             
             const nomeSpan = document.createElement("span");
             nomeSpan.textContent = mensagem.nome;
