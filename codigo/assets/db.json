@@ -1,0 +1,46 @@
+{
+    "msgs": [
+      {
+        "nome": "Exemplo",
+        "texto": "Coloque seu texto aqui",
+        "id": 0,
+        "receitaID": 1 
+      },
+      {
+        "nome": "Teste",
+        "texto": "Adorei a receita",
+        "id": 1,
+        "receitaID": 1
+      },
+      {
+        "nome": "Gabriel",
+        "texto": "Não gostei",
+        "id": 2,
+        "receitaID": 2
+      },
+      {
+        "nome": "Matheus ",
+        "texto": "Nao gostei",
+        "id": 3,
+        "receitaID": 1
+      },
+      {
+        "nome": "Luisa",
+        "texto": "Não gostei",
+        "id": 4,
+        "receitaID": 3
+      },
+      {
+        "nome": "Teste",
+        "texto": "Esperava mais",
+        "id": 27,
+        "receitaID": 1
+      },
+      {
+        "nome": "Gustavo",
+        "texto": "Os ingredientes estão fora do meu orçamento",
+        "id": 5,
+        "receitaID": 4
+      }
+    ]
+  }
