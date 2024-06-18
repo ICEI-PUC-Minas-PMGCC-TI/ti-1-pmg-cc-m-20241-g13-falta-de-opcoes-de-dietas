@@ -1,13 +1,25 @@
 
+
+
+.img-small {
+    background-color: rgb(55, 57, 54);
+    color: rgb(55, 57, 54);
+    width: 10%;
+    border:rgb(55, 57, 54);
+    padding: 1%;
+}
+.navbar{
+    margin-bottom: 2%;
+    background-color: rgb(131, 171, 40);
+}
+
 body, html {
     height: 100%;
     margin: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
     background-color: #ffffff; 
 }
-
 
 #msgs {
     list-style: none;
@@ -22,44 +34,6 @@ h1 {
     margin-top: 0;
 }
 
-.navbar {
-    background-color: #333; 
-    padding: 10px;
-    position: fixed;
-    top: 0; 
-    width: 100%; 
-    z-index: 1000; 
-}
-
-
-.navbar a {
-    color: white; 
-    text-decoration: none; 
-    margin-right: 400px; 
-    float: left;
-}
-
-
-.chat-container button {
-    background-color: #007bff; 
-    color: white; 
-    border: none; 
-    padding: 10px 20px; 
-    cursor: pointer; 
-}
-
-
-.navbar-brand img {
-    width: 50px; 
-    height: auto; 
-
-}
-.nav-item {
-    display: inline; 
-    margin-right: 0px; 
-    text-align: right;
-}
-
 .mensagem-comentario {
     border: 1px solid #02bd34; 
     padding: 20px; 
@@ -67,5 +41,16 @@ h1 {
     background-color: #c2fbc2; 
     border-radius: 50px;
 }
+
+.chat-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: auto; 
+    display: block; 
+}
+
 
 
