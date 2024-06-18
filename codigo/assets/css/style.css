@@ -10,7 +10,7 @@
 }
 .navbar{
     margin-bottom: 2%;
-    background-color: rgb(131, 171, 40);
+    background-color: #02bd34;
 }
 
 body, html {
@@ -36,7 +36,7 @@ h1 {
 
 .mensagem-comentario {
     border: 1px solid #02bd34; 
-    padding: 20px; 
+    padding: 10px; 
     margin-bottom: 10px; 
     background-color: #c2fbc2; 
     border-radius: 50px;
@@ -52,5 +52,15 @@ h1 {
     display: block; 
 }
 
+.textarea-comentario {
+    border: 1px solid #6c757d; /* Cor da borda cinza */
+    padding: 10px;
+    margin: auto; /* Centraliza na tela */
+    margin-bottom: 10px;
+    background-color: #e9ecef; /* Cor de fundo cinza */
+    border-radius: 50px;
+    width: 50%; /* Largura ajustável conforme necessário */
+    display: block;
+}
 
 
