@@ -1,13 +1,13 @@
 document.querySelector('.textarea-comentario').addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
         var mensagem = {
-            nome: "Nome do Usuário", // Substitua pelo nome do usuário
+            nome: "Matheus", // Substitua pelo nome do usuário
             texto: this.value,
             id: Date.now(), // Um identificador único para a mensagem
             receitaID: 1 // Substitua pelo ID da receita correspondente
         };
         
-        fetch("db.json")
+        fetch("/codigo/assets/pages/db.json")
         .then(response => response.json())
         .then(data => {
             console.log('Mensagem salva:', data);
