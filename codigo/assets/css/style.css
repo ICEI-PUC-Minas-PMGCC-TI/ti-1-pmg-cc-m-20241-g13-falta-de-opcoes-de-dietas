@@ -5,12 +5,12 @@
     background-color: rgb(55, 57, 54);
     color: rgb(55, 57, 54);
     width: 10%;
-    border:rgb(55, 57, 54);
+    border: rgb(55, 57, 54);
     padding: 1%;
 }
 .navbar{
     margin-bottom: 2%;
-    background-color: #02bd34;
+    background-color: rgb(131, 171, 40);
 }
 
 body, html {
