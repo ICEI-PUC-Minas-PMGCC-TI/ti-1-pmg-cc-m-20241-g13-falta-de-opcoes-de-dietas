@@ -12,8 +12,10 @@ Nossa solução consiste em criar uma nova dieta para a persona baseada em seus 
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Rommel Vieira Carneiro
+* Luciana Mara Freita Diniz
+* Pedro Henrique Ramos Costa
+* João Carlos Oliveira Caetano
 
 ## Instruções de utilização
 
