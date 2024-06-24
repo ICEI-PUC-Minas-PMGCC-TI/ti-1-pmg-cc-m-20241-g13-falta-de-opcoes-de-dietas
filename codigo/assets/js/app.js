@@ -1,19 +1,3 @@
-// Trabalho Interdisciplinar 1 - Aplicações Web
-//
-// Esse módulo realiza as operações de CRUD a partir de uma API baseada no JSONServer
-// O servidor JSONServer fica hospedado na seguinte URL
-// https://jsonserver.rommelpuc.repl.co/contatos
-//
-// Para fazer o seu servidor, acesse o projeto do JSONServer no Replit, faça o 
-// fork do projeto e altere o arquivo db.json para incluir os dados do seu projeto.
-// URL Projeto JSONServer: https://replit.com/@rommelpuc/JSONServer
-//
-// Autor: Rommel Vieira Carneiro
-// Data: 03/10/2023
-
-// const { response } = require("express");
-
-// URL da API JSONServer - Substitua pela URL correta da sua API
 const apiUrl = '/foods';
 
 function displayMessage(mensagem) {
@@ -35,20 +19,6 @@ function readalimento(processaDados) {
 
 const foodTable = document.getElementById('food-table');
 const totalCaloriasSpan = document.getElementById('total-calories');
-
-// function carregaAlimentos(){
-//     fetch('/codigo/assets/db/db.json')
-//     .then(response => response.json())
-//     .then(data => {
-//     // Salvando os dados no localStorage
-//     localStorage.setItem('myData', JSON.stringify(data));
-//     console.log('Dados salvos no localStorage:', data);
-//   })
-
-//   .catch(error => {
-//     console.error('Erro ao obter os dados:', error);
-//   });
-// }
 
 function exibe() {
     let totalCalorias = 0;
@@ -88,9 +58,6 @@ function exibe() {
     });
 }
 //**********************************************************************************************************************************
-
-
-
 
 const value = document.getElementById('value');
 const plusbutton = document.getElementById('plus');
