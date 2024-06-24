@@ -1,0 +1,396 @@
+/* CABEÇALHO */
+.img-small {
+  background-color: rgb(55, 57, 54);
+  color: rgb(55, 57, 54);
+  width: 10%;
+  border:rgb(55, 57, 54);
+  padding: 1%;
+}
+.navbar{
+  margin-bottom: 2%;
+  background-color: rgb(131, 171, 40);
+}
+
+.container {
+  margin-top: 30px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* INTRODUCAO*/
+
+.container {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+/* Styling for the title */
+
+h1.display-4 {
+  font-size: 3rem;
+  color: rgb(131, 171, 40);
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-top: 20%;
+}
+
+/* Styling for the lead paragraph */
+.pagtxt{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+p.lead {
+  font-size: 1.25rem;
+  color: #6c757d;
+}
+
+/* Styling for the image */
+img.img-fluid {
+  border-radius: 20px;
+  box-shadow: 10 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .container {
+      text-align: center;
+  }
+  
+  img.img-fluid {
+      margin-top: 20px;
+  }
+}
+
+/* FIM */
+
+
+
+
+
+
+/*FIM*/
+
+
+body{
+
+    background-color: white;
+  }
+
+label {
+    font-weight: bolder;
+}
+::placeholder {
+    color: lightskyblue !important;
+    opacity: 3;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:  lightskyblue !important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:  lightskyblue !important;
+    opacity:  3;
+ }
+ h1 {
+     text-align: center;
+ }
+ #msg {
+     height: 60px;
+ }
+ #grid-contatos tbody {
+     cursor: pointer;
+ }
+
+ 
+
+/* style.css */
+
+/* Define a height for the carousel */
+.conteudo{
+  background-color: rgba(132, 171, 40, 0.651);
+} 
+.carousel-inner {
+    height: 100%; /* Adjust the height as needed */
+}
+
+.carousel-item {
+    height: 100%; 
+    width: 100%;
+}
+
+.carousel-item img {
+    height: 100%; /* Adjust the height percentage as needed */
+    width: auto;
+    max-width: 100%;
+    object-fit: contain; /* Ensures the image fits within the container without stretching */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0,0,0,0.5); /* Optional: Adds a semi-transparent background to the control icons */
+}
+
+.carousel-indicators button {
+    background-color: rgba(0,0,0,0.5); /* Optional: Adds a semi-transparent background to the indicators */
+}
+/* CAROUSEL */ 
+.carousel-wrapper {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+  }
+  
+  .carousel {
+    width: 10%;
+    /* Ajuste conforme necessário */
+  }
+  
+  .carousel-item img {
+    max-height: 10%;
+    /* Ajuste a altura máxima conforme necessário */
+  }
+ 
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: black; /* Altera a cor do ícone para preto */
+  }
+  
+  .conteudo{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10%;
+    
+  }
+ 
+  
+  .carousel-wrapper {
+    display: flex;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+  }
+  /*TAMANHO DO CARROSSEL */
+  .carousel {
+    width: 70%;
+    /* Ajuste conforme necessário */
+  }
+  
+  .carousel-item img {
+    max-height: 100%;
+    /* Ajuste a altura máxima conforme necessário */
+  }
+  .fundocarrossel{
+    background-color: rgba(255, 255, 255, 0);
+    margin: 0px 80px;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: black; /* Altera a cor do ícone para preto */
+  }
+  /*ESTILIZANDO OS CARDS*/
+.text-center{
+  color:rgba(132, 171, 40, 0.733);
+}
+  .containercard  {
+    background-color: rgba(132, 171, 40, 0.733);
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+  
+  }
+  .cardtext{
+    font-weight: bolder;
+    font-size: 150%;
+    color:white;
+  }
+  
+    /*CABOOO*/
+
+
+    /*CSS PARA ESTILIZAR AS INFOS DE CADA RECEITA */
+    .conteudoinfos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0 auto;
+    }
+    
+    .infos-item {
+      display: flex;
+      align-items: flex-start;
+      margin: 2% 3%;
+      text-align: left;
+      width: 100%;
+      max-width: 1200px;
+    }
+    
+    .infos-item img {
+      width: 90%;
+      margin-top: 9rem;
+      object-fit: cover;
+    }
+    
+    .informacoes {
+      padding-left: 2rem;
+      margin-left: 0;
+      width: 60%;
+    }
+    
+    .titulo {
+      font-size: larger;
+      font-style: oblique;
+      color: #333;
+    }
+    
+    .infos-caption {
+      margin-top: 40px;
+    }
+    
+    .botoes {
+      display: flex;
+      justify-content: flex-start;
+      gap: 10px;
+      margin-top: 1rem;
+    }
+    
+    .infos-item a {
+      margin-top: -6rem;
+    }
+    
+    .titulopag {
+      margin-top: 0;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      color: rgb(131, 171, 40);
+      font-size: 2.6rem;
+    }
+    
+    .pagtxt {
+      margin: 3% 0;
+      text-align: left;
+      color: black;
+      font-size: 110%;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    @media (max-width: 1050px) {
+      .infos-item {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .infos-item img {
+        width: 100%;
+        max-width: 50rem;
+        margin-top: 3rem;
+      }
+    
+      .informacoes {
+        padding-left: 0;
+        margin-top: 3rem;
+        width: 100%;
+        text-align: center;
+      }
+    
+      .botoes {
+        justify-content: center;
+      }
+    
+      .pagtxt {
+        text-align: center;
+      }
+    }
+
+
+    /*FIM*/
+
+    /*BOTOES*/
+   /* Estilos para o botão "Substituir" */
+.btn-substituir {
+  display: inline-block;
+  background-color: #4CAF50; /* Verde */
+  color: white;
+  text-align: center;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 20px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-substituir:hover {
+  background-color: #45a049; /* Altera a cor ao passar o mouse */
+  transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+}
+
+/* Centraliza o botão horizontalmente */
+.col-md-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+
+    .favorite-btn {
+      margin-top: 5%;
+      display: inline-block;
+      padding: 5%;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 150%; /* Tamanho do ícone de coração */
+      color: #ff4d4d; /* Cor vermelha */
+      transition: color 0.3s ease; /* Transição suave de cor */
+  }
+  
+  .favorite-btn:hover {
+      color: #e60000; /* Cor vermelha mais escura ao passar o mouse */
+  }
+  
+  .heart-icon::before {
+      content: "\2665"; /* Código Unicode para o símbolo de coração */
+  }
+  
+  .heart-icon {
+      display: inline-block;
+      width: 80%;
+      height: 80%;
+      font-size: inherit;
+      line-height: 1;
+      vertical-align: middle;
+  }
+
+.comment-btn {
+  background-color: rgb(131, 171, 40);
+  color: white; /* Cor do texto branco */
+  padding: 6% 5%; /* Espaçamento interno */
+  border: none; /* Sem borda */
+  border-radius: 20%; /* Bordas arredondadas */
+  font-size: 100%; /* Tamanho da fonte */
+  cursor: pointer; /* Cursor de ponteiro */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+  outline: none; /* Remove o contorno ao focar */
+}
+
+.comment-btn:hover {
+  background-color:  rgb(83, 107, 25);
+  transform: translateY(-2px); /* Efeito de elevação sutil */
+}
+
+.comment-btn:focus {
+  outline: none; /* Remove o contorno ao focar */
+}
+
+.comment-btn:active {
+  transform: translateY(0); /* Reverte o efeito de elevação ao clicar */
+}
+
+  
