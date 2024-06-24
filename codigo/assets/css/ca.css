@@ -21,3 +21,14 @@ label {
   #grid-alimentos tbody {
      cursor: pointer;
   }
+  .img-small {
+    background-color: rgb(55, 57, 54);
+    color: rgb(55, 57, 54);
+    width: 10%;
+    border:rgb(55, 57, 54);
+    padding: 1%;
+}
+.navbar{
+    margin-bottom: 2%;
+    background-color: rgb(131, 171, 40);
+}
