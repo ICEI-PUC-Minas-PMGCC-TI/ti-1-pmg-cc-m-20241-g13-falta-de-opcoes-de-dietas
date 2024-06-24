@@ -11,7 +11,7 @@
 // Autor: Rommel Vieira Carneiro
 // Data: 03/10/2023
 
-const { response } = require("express");
+// const { response } = require("express");
 
 // URL da API JSONServer - Substitua pela URL correta da sua API
 const apiUrl = '/foods';
