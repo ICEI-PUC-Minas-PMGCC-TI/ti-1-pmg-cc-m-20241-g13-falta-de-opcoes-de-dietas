@@ -104,7 +104,7 @@
         </div>
     </div>
 
-    <script src="./scripts/app.js"></script>
+    <script src="../assets/js/ca.js"></script>
     <script>
         // carrega os dados a partir da API JSONServer
         var db = []
@@ -133,7 +133,7 @@
                     ((alimento.categoria == fcg) || (fcg == ''))) {
 
                     // Inclui o contato na tabela    
-                    tablealimentos.innerHTML += `<tr><td scope="row">${contato.id}</td>
+                    tablealimentos.innerHTML += `<tr><td scope="row">${alimento.id}</td>
                                                     <td>${alimento.nome}</td>
                                                     <td>${alimento.categoria}</td>
                                                     <td>${alimento.calorias}</td>

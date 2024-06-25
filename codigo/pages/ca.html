@@ -136,25 +136,25 @@
         </div>
     </div>
 
-    <script src="../assests/js/ca.js"></script>
+    <script src="../assets/js/ca.js"></script>
     <script>
         function exibealimentos() {
             tablealimentos = document.getElementById("table-alimentos");
 
             // Remove todas as linhas do corpo da tabela
             tablealimentos.innerHTML = "";
+            readalimento(dados => {
 
-            readalimento (dados => {
                 // Popula a tabela com os registros do banco de dados
                 for (i = 0; i < dados.length; i++) {
                     let alimentos = dados[i];    
-                    tablealimentos.innerHTML += `<tr><td scope="row">${alimento.id}</td>
-                                                    <td>${alimento.nome}</td>
-                                                    <td>${alimento.categoria}</td>
-                                                    <td>${alimento.calorias}</td>
-                                                    <td>${alimento.carboidratos}</td>
-                                                    <td>${alimento.proteínas}</td>
-                                                    <td>${alimento.quantidade}</td>
+                    tablealimentos.innerHTML += `<tr><td scope="row">${alimentos.id}</td>
+                                                    <td>${alimentos.nome}</td>
+                                                    <td>${alimentos.categoria}</td>
+                                                    <td>${alimentos.calorias}</td>
+                                                    <td>${alimentos.carboidratos}</td>
+                                                    <td>${alimentos.proteínas}</td>
+                                                    <td>${alimentos.quantidade}</td>
                                                 </tr>`;
                 }
             })

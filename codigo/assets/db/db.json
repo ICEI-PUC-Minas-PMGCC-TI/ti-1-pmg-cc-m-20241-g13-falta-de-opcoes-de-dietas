@@ -1,69 +1,67 @@
 {
-    "foods": [
-        {
-            "id": 1,
-            "nome": "Pão de sal",
-            "categoria": "café da manhã",
-            "calorias": "140",
-            "carboidratos": "28,5",
-            "proteínas": "4,1",
-            "quantidade": "50"
-        },
-        {
-            "id": 2,
-            "nome": "Ovo cozido",
-            "categoria": "café da manhã",
-            "calorias": "92",
-            "carboidratos": "0,67",
-            "proteínas": "6g",
-            "quantidade": "60"
-        },
-        {
-            "id": 3,
-            "nome": "tapioca",
-            "categoria": "café da manhã",
-            "calorias": "49",
-            "carboidratos": "12",
-            "proteínas": "0",
-            "quantidade": "20"
-        },
-        {
-            "id": 4,
-            "nome": "banana",
-            "categoria": "café da manhã",
-            "calorias": "89",
-            "carboidratos": "22,8",
-            "proteínas": "1,1",
-            "quantidade": "100"
-        },
-        {
-            "id": 5,
-            "nome": "arroz cozido",
-            "categoria": "almoço/janta",
-            "calorias": "64",
-            "carboidratos": "14",
-            "proteínas": "1,25",
-            "quantidade": "50"
-        },
-        {
-            "id": 6,
-            "nome": "feijão cozido",
-            "categoria": "almoço/janta",
-            "calorias": "38",
-            "carboidratos": "6,8",
-            "proteínas": "2,52",
-            "quantidade": "50"
-        },
-        {
-            "id": 7,
-            "nome": "peito de frango",
-            "categoria": "almoço/janta",
-            "calorias": "64",
-            "carboidratos": "0",
-            "proteínas": "13",
-            "quantidade": "50"
-        }
-
-        
-    ]
+  "foods": [
+    {
+      "id": 1,
+      "nome": "Pão de sal",
+      "categoria": "café da manhã",
+      "calorias": "140",
+      "carboidratos": "28,5",
+      "proteínas": "4,1",
+      "quantidade": "50"
+    },
+    {
+      "id": 2,
+      "nome": "Ovo cozido",
+      "categoria": "café da manhã",
+      "calorias": "92",
+      "carboidratos": "0,67",
+      "proteínas": "6g",
+      "quantidade": "60"
+    },
+    {
+      "id": 3,
+      "nome": "tapioca",
+      "categoria": "café da manhã",
+      "calorias": "49",
+      "carboidratos": "12",
+      "proteínas": "0",
+      "quantidade": "20"
+    },
+    {
+      "id": 4,
+      "nome": "banana",
+      "categoria": "café da manhã",
+      "calorias": "89",
+      "carboidratos": "22,8",
+      "proteínas": "1,1",
+      "quantidade": "100"
+    },
+    {
+      "id": 5,
+      "nome": "arroz cozido",
+      "categoria": "almoço/janta",
+      "calorias": "64",
+      "carboidratos": "14",
+      "proteínas": "1,25",
+      "quantidade": "50"
+    },
+    {
+      "id": 6,
+      "nome": "feijão cozido",
+      "categoria": "almoço/janta",
+      "calorias": "38",
+      "carboidratos": "6,8",
+      "proteínas": "2,52",
+      "quantidade": "50"
+    },
+    {
+      "id": 7,
+      "nome": "peito de frango",
+      "categoria": "almoço/janta",
+      "calorias": "64",
+      "carboidratos": "0",
+      "proteínas": "13",
+      "quantidade": "50"
+    }
+  ]
 }
