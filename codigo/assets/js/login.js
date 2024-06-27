@@ -37,7 +37,7 @@ function generateUUID() { // Public Domain/MIT
 // Dados de usuários para serem utilizados como carga inicial
 const dadosIniciais = {
     usuarios: [
-        { "id": generateUUID (), "login": "admin", "senha": "123", "nome": "Fit Flex", "email": "admin@abc.com"},
+        { "id": "fitflex", "login": "admin", "senha": "ff", "nome": "Fit Flex", "email": "admin@abc.com"},
         { "id": generateUUID (), "login": "user", "senha": "123", "nome": "Usuario Comum", "email": "user@abc.com"},
     ]
 };
@@ -125,6 +125,7 @@ function addUser (nome, login, senha, email) {
 function setUserPass () {
 
 }
+
 
 
 // Inicializa as estruturas utilizadas pelo LoginApp

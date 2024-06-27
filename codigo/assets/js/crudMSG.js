@@ -12,13 +12,9 @@
 // Data: 03/10/2023
 
 // URL da API JSONServer - Substitua pela URL correta da sua API
-const apiUrl = 'https://9910e407-c18e-410a-a606-a84ceb63e82c-00-1amhl2w48y5qw.spock.replit.dev/usuarios';
+const apiUrl = '/comentarios';
 //const apiUrl = 'https://jsonserver.rommelpuc.repl.co/contatos'; 
 
-function displayMessage(mensagem) {
-    msg = document.getElementById('msg');
-    msg.innerHTML = '<div class="alert alert-warning">' + mensagem + '</div>';
-}
 
 function readComents(processaDados) {
     fetch(apiUrl)
@@ -32,13 +28,13 @@ function readComents(processaDados) {
         });
 }
 
-function createComents(msg, refreshFunction) {
+function createComents(comentario, refreshFunction) {
     fetch(apiUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(msg),
+        body: JSON.stringify(comentario),
     })
         .then(response => response.json())
         .then(data => {
@@ -52,13 +48,13 @@ function createComents(msg, refreshFunction) {
         });
 }
 
-function updateComents(id, msg, refreshFunction) {
+function updateComents(id, comentario, refreshFunction) {
     fetch(`${apiUrl}/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(msg),
+        body: JSON.stringify(comentario),
     })
         .then(response => response.json())
         .then(data => {
