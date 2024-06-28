@@ -58,9 +58,13 @@ function displayRecipe(recipe) {
     container.innerHTML = `
         <div class="recipe">
             <h3>${recipe.receita}</h3>
+            <h5>Categoria: ${recipe.categoria}</h5>
             <p>Calorias: ${recipe.calorias}</p>
             <p>Ingredientes: ${recipe.ingredientes}</p>
-            <p>Instruções: ${recipe.instrucoes}</p>
+            <p>Quantidade: ${recipe.quantidade}</p>
+            <p>Proteina: ${recipe.proteina}</p>
+            <p>Gorduras: ${recipe.gorduras}</p>
+            <p>Carboidratos: ${recipe.carbos}</p>
         </div>
     `;
 }

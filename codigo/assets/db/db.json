@@ -4,7 +4,7 @@
             "id": 1,
             "receita": "Pão com ovo",
             "teste": "teste",
-            "foto": "../images/paocovo.jpeg",
+            "foto": "/assets/images/paocovo.jpeg",
             "calorias": 252,
             "categoria": "Lanche",
             "quantidade": "100g",
@@ -17,7 +17,7 @@
         {
             "id": 2,
             "receita": "Panqueca de banana",
-             "foto": "../images/bananapanc.jpg",
+             "foto": "/assets/images/bananapanc.jpg",
             "calorias": 119,
             "categoria": "Lanche",
             "quantidade": "100g",
@@ -30,7 +30,7 @@
         {
             "id": 3,
             "receita": "Salada Ceaser",
-             "foto": "../images/salada ceaser.jpg",
+             "foto": "/assets/images/salada ceaser.jpg",
             "calorias": 170,
             "categoria": "Refeição Completa",
             "quantidade": "100g",
@@ -43,7 +43,7 @@
         {
             "id": 4,
             "receita": "Mingau de Aveia",
-             "foto": "../images/mingau.jpg",
+             "foto": "/assets/images/mingau.jpg",
             "calorias": 280,
             "categoria": "Lanche",
             "quantidade": "100g",
@@ -56,7 +56,7 @@
         {
             "id": 5,
             "receita": "Tapioca de frango",
-             "foto": "../images/tapioca.jpg",
+             "foto": "/assets/images/tapioca.jpg",
             "calorias": 226,
             "categoria": "Refeição Completa",
             "quantidade": "100g",

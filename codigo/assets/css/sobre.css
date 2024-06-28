@@ -1,0 +1,49 @@
+.img-small {
+    background-color: rgb(55, 57, 54);
+    color: rgb(55, 57, 54);
+    width: 10%;
+    border:rgb(55, 57, 54);
+    padding: 1%;
+}
+.navbar{
+    margin-bottom: 2%;
+    background-color: rgb(131, 171, 40);
+
+}
+
+.nutri {
+    float: right;
+    margin-right: 20px; 
+}
+h1 {
+    float: left;
+    margin-left: 15%;
+    margin-top: 2%;
+    color: #333; 
+}
+h4 {
+    float: left;
+    margin-left: 10px;
+}
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1%px;
+}
+.container-texto{
+    max-width: 75%;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Define duas colunas */
+    grid-gap: 20px; /* Espaçamento entre as colunas */
+}
+.imgs{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.nome-footer{
+    display: flex;
+    justify-content: space-evenly;
+}

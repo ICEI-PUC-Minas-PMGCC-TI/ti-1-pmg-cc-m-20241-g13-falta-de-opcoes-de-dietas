@@ -1,5 +1,5 @@
 function readReceita() {
-    fetch("../db/db.json")
+    fetch("/assets/db/db.json")
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erro ao buscar dados: ' + response.statusText);
@@ -28,7 +28,7 @@ function ingredientes(receitas) {
         let receita = receitas[i];
         let activeClass = i === 0 ? 'active' : '';
         str += `<div class="carousel-item ${activeClass}">
-                    <a onclick="salvaLocalStorage('${receita.id}')" href="infos.html">
+                    <a onclick="salvaLocalStorage('${receita.id}')" href="/pages/infos.html">
                         <img src="${receita.foto}" class="d-block w-100" alt="erro">
                     </a>
                     <div class="carousel-caption d-none d-md-block">
