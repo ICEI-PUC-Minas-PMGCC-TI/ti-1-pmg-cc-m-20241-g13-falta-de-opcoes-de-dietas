@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="../assets/css/ca.css">
 </head>
 
-<body onload="init()">
-    <body onload="verificaLogin()">
+<body onload="initAndVerifyLogin()">
+
         <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -24,7 +24,7 @@
             <div class="navtext collapse navbar-collapse " id="navbarNav">
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="./index.html">Página inicial</a>
+                  <a class="nav-link" href="../index.html">Página inicial</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="./sobre.html">Sobre nós</a>
@@ -138,6 +138,7 @@
     </div>
 
     <script src="../assets/js/ca.js"></script>
+    <script src="../assets/js/verificaLogin.js"></script>
     <script>
         function exibealimentos() {
             tablealimentos = document.getElementById("table-alimentos");

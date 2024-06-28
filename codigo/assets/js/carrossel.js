@@ -1,5 +1,5 @@
 function readReceita() {
-    fetch("/assets/db/db.json")
+    fetch("/assets/db/dbAlimentos.json")
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erro ao buscar dados: ' + response.statusText);

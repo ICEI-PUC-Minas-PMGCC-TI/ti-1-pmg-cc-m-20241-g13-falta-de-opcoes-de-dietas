@@ -69,7 +69,7 @@
       "id": 1,
       "receita": "Pão com ovo",
       "teste": "teste",
-      "foto": "../images/paocovo.jpeg",
+      "foto": "/assets/images/paocovo.jpeg",
       "calorias": 252,
       "categoria": "Lanche",
       "quantidade": "100g",
@@ -82,7 +82,7 @@
     {
       "id": 2,
       "receita": "Panqueca de banana",
-      "foto": "../images/bananapanc.jpg",
+      "foto": "/assets/images/bananapanc.jpg",
       "calorias": 119,
       "categoria": "Lanche",
       "quantidade": "100g",
@@ -95,7 +95,7 @@
     {
       "id": 3,
       "receita": "Salada Ceaser",
-      "foto": "../images/salada ceaser.jpg",
+      "foto": "/assets/images/salada ceaser.jpg",
       "calorias": 170,
       "categoria": "Refeição Completa",
       "quantidade": "100g",
@@ -108,11 +108,11 @@
     {
       "id": 4,
       "receita": "Mingau de Aveia",
-      "foto": "../images/mingau.jpg",
-      "calorias": 280,
+      "foto": "/assets/images/mingau.jpg",
+      "calorias": 145,
       "categoria": "Lanche",
       "quantidade": "100g",
-      "ingredientes":"1/2 xícara leite integral, \n 1 colher de chá canela, \n1/2 colher de chá extrato de baunilha, \n1/2 xícara água, \n2 colheres de sopa aveia em flocos finos, \n1/2 colher de sopa adoçante,  \n1 banana nanica",
+      "ingredientes": "1/2 xícara leite integral, \n 1 colher de chá canela, \n1/2 colher de chá extrato de baunilha, \n1/2 xícara água, \n2 colheres de sopa aveia em flocos finos, \n1/2 colher de sopa adoçante,  \n1 banana nanica",
       "link": "https://www.fatsecret.com.br/calorias-nutri%C3%A7%C3%A3o/gen%C3%A9rico/mingau-de-aveia",
       "proteina": 9.39,
       "carbos": 47.77,
@@ -121,7 +121,7 @@
     {
       "id": 5,
       "receita": "Tapioca de frango",
-      "foto": "../images/tapioca.jpg",
+      "foto": "/assets/images/tapioca.jpg",
       "calorias": 226,
       "categoria": "Refeição Completa",
       "quantidade": "100g",
@@ -130,6 +130,71 @@
       "proteina": 7.31,
       "carbos": 44.23,
       "gorduras": 1.86
+    }
+  ],
+  "comentarios": [
+    {
+      "nome": "Exemplo",
+      "texto": "Aaaa",
+      "id": 0
+    },
+    {
+      "nome": "Teste",
+      "texto": "Adorei a receita",
+      "id": 1
+    },
+    {
+      "nome": "Gabriel",
+      "texto": "Não gostei",
+      "id": 2,
+      "receitaID": 2
+    },
+    {
+      "nome": "Luisa",
+      "texto": "Não gostei",
+      "id": 4,
+      "receitaID": 3
+    },
+    {
+      "nome": "Teste",
+      "texto": "Teste",
+      "id": 27
+    },
+    {
+      "nome": "Gustavo",
+      "texto": "Os ingredientes estão fora do meu orçamento",
+      "id": 5,
+      "receitaID": 4
+    },
+    {
+      "nome": "Matheus",
+      "texto": "aa",
+      "id": 28
+    },
+    {
+      "nome": "Teste",
+      "texto": "Adorei a receita",
+      "id": 29
+    },
+    {
+      "nome": "Fit Flex",
+      "texto": "teste",
+      "id": 30
+    },
+    {
+      "nome": "Fit Flex",
+      "texto": "teste",
+      "id": 31
+    },
+    {
+      "nome": "Fit Flex",
+      "texto": "a",
+      "id": 32
+    },
+    {
+      "nome": "Fit Flex",
+      "texto": "a",
+      "id": 33
     }
   ]
 }

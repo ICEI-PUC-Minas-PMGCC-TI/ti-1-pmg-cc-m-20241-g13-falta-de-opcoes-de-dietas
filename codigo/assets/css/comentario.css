@@ -46,23 +46,27 @@ h1 {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 30px; /* Aumentado de 10px 20px para 15px 30px */
     cursor: pointer;
-    margin: auto; 
-    display: block; 
+    margin: auto;
+    display: block;
+    height: 50px; /* Altura definida */
+    width: 150px; /* Largura definida */
+    top: 50%
 }
 
+
 .textarea-comentario {
-    border: 1px solid #6c757d; /* Cor da borda cinza */
+    border: 1px solid #6c757d; 
     padding: 10px;
-    margin: auto; /* Centraliza na tela */
-    margin-bottom: 10px;
-    background-color: #e9ecef; /* Cor de fundo cinza */
-    border-radius: 50px;
-    width: 50%; /* Largura ajustável conforme necessário */
+    margin: auto; 
+    background-color: #e9ecef; 
+    border-radius: 10px;
+    width: 50%; 
     display: block;
 }
 
 a {
     text-decoration: none;
+    padding: 50px;
 }

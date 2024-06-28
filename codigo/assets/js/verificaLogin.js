@@ -7,3 +7,7 @@ function verificaLogin(){
         document.getElementById("cadastroReceitasContainer2").setAttribute('style', 'display: block;');
     }
 }
+function initAndVerifyLogin() {
+    init(); // Chama a primeira função
+    verificaLogin(); // Chama a segunda função
+}
