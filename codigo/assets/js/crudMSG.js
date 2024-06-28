@@ -24,7 +24,6 @@ function readComents(processaDados) {
         })
         .catch(error => {
             console.error('Erro ao ler contatos via API JSONServer:', error);
-            displayMessage("Erro ao ler contatos");
         });
 }
 
@@ -38,13 +37,11 @@ function createComents(comentario, refreshFunction) {
     })
         .then(response => response.json())
         .then(data => {
-            displayMessage("Comentário postado!");
             if (refreshFunction)
                 refreshFunction();
         })
         .catch(error => {
             console.error('Erro ao inserir contato via API JSONServer:', error);
-            displayMessage("Erro ao inserir contato");
         });
 }
 
@@ -74,12 +71,11 @@ function deleteComents(id, refreshFunction) {
     })
         .then(response => response.json())
         .then(data => {
-            displayMessage("Comentário removido com sucesso");
             if (refreshFunction)
                 refreshFunction();
         })
         .catch(error => {
             console.error('Erro ao remover contato via API JSONServer:', error);
-            displayMessage("Erro ao remover contato");
+
         });
 }

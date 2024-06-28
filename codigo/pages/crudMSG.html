@@ -52,8 +52,8 @@
                     <input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
                 </div>
                 <div class="col-sm-8">
-                    <label for="inputNome">Nome (*)</label>
-                    <input type="text" class="form-control" id="inputNome" required placeholder="Digite seu nome">
+                    <label for="inputNome">Seu nome:</label>
+                    <p id="mostraNome"></p>
                 </div>
             </div>
             <div class="form-group row">
@@ -120,9 +120,17 @@
             })
         }
 
+        function mostraNome(){
+            let user = sessionStorage.getItem("usuarioCorrente");
+            user = JSON.parse(user)
+            const nome = user.nome
+            let elemento = document.getElementById('mostraNome')
+            elemento.textContent = nome;
+        }
         function init() {
             // Define uma variável para o formulário de contato
             formComents = document.getElementById("form-coments");
+            mostraNome();
 
             // Adiciona funções para tratar os eventos 
             btnInsert = document.getElementById("btnInsert");
@@ -134,7 +142,7 @@
                 }
 
                 // Obtem os valores dos campos do formulário
-                let campoNome = document.getElementById ('inputNome').value;
+                let campoNome = document.getElementById ('mostraNome').textContent;
                 let campoMsg = document.getElementById ('inputMSG').value;
 
 
@@ -160,7 +168,7 @@
                 }
 
                 // Obtem os valores dos campos do formulário
-                let campoNome = document.getElementById('inputNome').value;
+                let campoNome = document.getElementById('mostraNome').value;
                 let campoMsg = document.getElementById('inputMSG').value;
 
                 
@@ -211,7 +219,7 @@
                     
                     // Preenche os campos do formulário com os dados da linha selecionada na tabela
                     document.getElementById ('inputId').value = colunas[0].innerText;
-                    document.getElementById ('inputNome').value = colunas[1].innerText;
+                    document.getElementById ('mostraNome').textContent = colunas[1].innerText;
                     document.getElementById ('inputMSG').value = colunas[2].innerText;
                 }
             });
