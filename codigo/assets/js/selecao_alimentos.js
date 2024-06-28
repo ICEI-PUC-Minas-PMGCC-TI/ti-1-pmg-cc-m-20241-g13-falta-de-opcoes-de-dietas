@@ -160,5 +160,11 @@ function saveCurrentValues() {
     localStorage.setItem("value", JSON.stringify(Object.entries(valuesMap).map(([id, textContent]) => ({ id, textContent }))));
 }
 
+function buscaReceita(){
+    let tot = document.getElementById("total-calories")
+    let val = tot.textContent
+    localStorage.setItem("calorie", val)
+    location.href = './../pages/compara.html'
+}
 
 document.addEventListener('mouseup', () => clearInterval(intervalID))
