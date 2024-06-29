@@ -176,8 +176,75 @@ function cadastro(recipes) {
         console.error("Elemento com id 'ic' não encontrado no DOM");
     }
 }
+document.addEventListener('DOMContentLoaded', function() {
+    let favoriteRecipes = JSON.parse(localStorage.getItem("favoritas")) || [];
+    if (favoriteRecipes.length === 0) {
+        displayMessage("Nenhum item favorito encontrado.");
+        return;
+    }
 
+    let favoriteId = favoriteRecipes[0]; // Supondo que você quer mostrar o primeiro favorito da lista
 
-        var ageElement = document.getElementById('age');
-        var text = "Este é o texto que será inserido no parágrafo.";
-        ageElement.innerText = text;
+    fetch("db.json")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao buscar dados: ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (!data || !data.receitas || data.receitas.length === 0) {
+                throw new Error('O arquivo JSON não possui receitas válidas.');
+            }
+
+            let favoriteItem = data.receitas.find(recipe => recipe.id === favoriteId);
+            if (favoriteItem) {
+                renderFavoriteItem(favoriteItem);
+            } else {
+                displayMessage("Item favorito não encontrado nos dados.");
+            }
+        })
+        .catch(error => {
+            console.error('Erro ao ler receitas:', error);
+            displayMessage("Erro ao ler receitas. Verifique o console para mais detalhes.");
+        });
+});
+
+function renderFavoriteItem(item) {
+    let container = document.getElementById('favorite-item-container');
+    if (container) {
+        container.innerHTML = `
+            <div class="infos-item">
+                <a href="infos.html">
+                    <img src="${item.foto}" class="d-block w-2" alt="...">
+                </a>
+                <div class="infos-caption d-none d-md-block">
+                    <h5 class="cardtext"> <span class="titulopag"> ${item.receita} </span></h5>
+                    <p class="cardinfos"><span class="pagtxt"> Quantidade por Porção: </span> ${item.quantidade}</p>
+                    <p class="cardinfos"><span class="pagtxt"> Categoria: </span>${item.categoria}</p>
+                    <p class="cardinfos"><span class="pagtxt"> Calorias por Porção: </span>${item.calorias}kcal</p>
+                    <p class="cardinfos"><span class="pagtxt"> Ingredientes: </span>${item.ingredientes}</p>
+                    <p class="cardinfos"><span class="pagtxt"> Proteínas: </span> ${item.proteina}g</p>
+                    <p class="cardinfos"><span class="pagtxt"> Gorduras: </span> ${item.gorduras}g</p>
+                    <p class="cardinfos"><span class="pagtxt"> Carboidratos: </span> ${item.carbos}g</p>
+                    <button class="favorite-btn" onclick="toggleFavorite(${item.id})">
+                        ${isFavorite(item.id) ? 'Desfavoritar' : 'Favoritar'}
+                    </button>
+                    <button class="comment-btn" onclick="viewComments(${item.id})">
+                        Visualizar Comentários
+                    </button>
+                </div>
+            </div>`;
+    } else {
+        console.error("Elemento com id 'favorite-item-container' não encontrado no DOM.");
+    }
+}
+
+function isFavorite(recipeId) {
+    let favoriteRecipes = JSON.parse(localStorage.getItem("favoritas")) || [];
+    return favoriteRecipes.includes(recipeId);
+}
+
+function displayMessage(msg) {
+    alert(msg);
+}
