@@ -50,7 +50,7 @@ function ingredientes(recipes) {
                             <button class="favorite-btn" onclick="toggleFavorite(${recipe.id})">
                                 ${isFavorite ? 'Desfavoritar' : 'Favoritar'}
                             </button>
-                            <button class="comment-btn" onclick="viewComments(${recipe.id})">
+                            <button class="comment-btn" onclick="window.location.href='/pages/exibMSG.html';">
                                 Visualizar Comentários
                             </button>
                             </div>

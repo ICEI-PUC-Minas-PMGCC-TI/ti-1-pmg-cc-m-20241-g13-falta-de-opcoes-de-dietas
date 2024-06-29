@@ -19,38 +19,40 @@
 <!-- NAVBAR -->
 
 <body onload="exibe()">
-  <body onload="verificaLogin()">
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="/assets/images/logofitflex.PNG" class="img-thumbnail img-small rounded-circle" alt="..."></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navtext collapse navbar-collapse " id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Página inicial</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./sobre.html">Sobre nós</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./contato.html">Contato</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./login.html" id="loginLink">Login</a>
-            </li>
-            <li class="nav-item" id="cadastroReceitasContainer1" style="display: none;">
-              <a class="nav-link" href="./ca.html" id="cadastroAlimento">Cadastro Alimentos</a>
-            </li>
-            <li class="nav-item" id="cadastroReceitasContainer2" style="display: none;">
-              <a class="nav-link" href="#" id="cadastroReceitas">Cadastro Receitas</a>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/images/logofitflex.PNG" class="img-thumbnail img-small rounded-circle" alt="..."></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navtext collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Página inicial</a>
           </li>
-          </ul>
-        </div>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./sobre.html">Sobre nós</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contato.html">Contato</a>
+          </li>
+          <li class="nav-item" id="containerLogin" style="display: block">
+            <a class="nav-link" href="./login.html" id="loginLink">Login</a>
+          </li>
+          <li class="nav-item" id="containerPerfil" style="display: none">
+              <a class="nav-link" href="./perfil.html" id="loginLink">Meu Perfil</a>
+            </li>
+          <li class="nav-item" id="cadastroReceitasContainer1" style="display: none;">
+            <a class="nav-link" href="./ca.html" id="cadastroAlimento">Cadastro Alimentos</a>
+          </li>
+          <li class="nav-item" id="cadastroReceitasContainer2" style="display: none;">
+            <a class="nav-link" href="./crudReceita.html" id="cadastroReceitas">Cadastro Receitas</a>
+        </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 <!--**********************************************************************************************************************************-->
       
 <!-- PESQUISA -->
@@ -122,7 +124,10 @@ function contador(numero, nome){
     nome.textContent = num.toString(); // Atualizando o conteúdo do elemento
 }
 
+
+
 </script>
   <script src="./../assets/js/selecao_alimentos.js"></script>
+  
 </body>
 </html>
