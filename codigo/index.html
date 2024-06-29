@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Receitas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="/assets/images/logofitflex.PNG" class="img-thumbnail img-small rounded-circle" alt="..."></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navtext collapse navbar-collapse " id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Página inicial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./pages/sobre.html">Sobre nós</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/contato.html">Contato</a>
+            </li>
+            <li class="nav-item" id="containerLogin" style="display: block">
+              <a class="nav-link" href="./pages/login.html" id="loginLink">Login</a>
+            </li>
+            <li class="nav-item" id="containerPerfil" style="display: none">
+                <a class="nav-link" href="./pages/perfil.html" id="loginLink">Meu Perfil</a>
+              </li>
+            <li class="nav-item" id="cadastroReceitasContainer1" style="display: none;">
+              <a class="nav-link" href="./pages/ca.html" id="cadastroAlimento">Cadastro Alimentos</a>
+            </li>
+            <li class="nav-item" id="cadastroReceitasContainer2" style="display: none;">
+              <a class="nav-link" href="./pages/crudReceita.html" id="cadastroReceitas">Cadastro Receitas</a>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--FIM-->
+    
+    <!-- Title and Image Section -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="display-4">Bem-vindo ao FitFlex!</h1>
+                <p class="lead">Acompanhe suas dietas e explore substituições saudáveis para suas receitas favoritas.</p>
+                <a href="./pages/selecao_alimentos.html" class="btn-substituir">Substituir Receita   </a>
+            </div>
+            <div class="col-md-6">
+                <img src="/assets/images/paginicial.jpg" class="img-fluid" alt="Imagem de destaque">
+            </div>
+        </div>
+    </div>
+    <!-- FIM -->
+     
+    <!-- Carousel -->
+    <nav class="conteudo">
+      <p class="titulo"><strong></strong></p>
+      <nav class="fundocarrossel">
+          <div class="carousel-wrapper">
+              <div id="carouselExampleIndicators" class="carousel slide">
+                  <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                          class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                          aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                          aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                          aria-label="Slide 4"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                          aria-label="Slide 5"></button>
+                  </div>
+
+                  <!-- The slideshow/carousel -->
+                  <div class="carousel-inner" id="ci">
+                  </div>
+
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+          </div>
+      </nav>
+  </nav>
+  <!-- Fim do carrossel-->
+
+
+    <!--TEXTO INTRODUTORIO-->
+    <div>
+        <p class="titulopag">O que é o FitFlex?</p>
+        <p class="pagtxt">
+            Bem-vindo ao Nosso Site de Acompanhamento de Dietas e Substituição de Receitas. Criado por alunos dedicados
+            do curso de Ciência da Computação da Puc Minas, este site inovador foi desenvolvido com o objetivo de te
+            ajudar a acompanhar suas dietas e explorar substituições saudáveis para suas receitas favoritas. Combinando
+            conhecimentos de tecnologia, nutrição e design, nosso grupo estudantes se empenhou em criar uma plataforma
+            intuitiva e acessível que facilita o gerenciamento de suas refeições diárias. Aqui, você pode encontrar uma
+            vasta gama de receitas adaptadas às suas necessidades alimentares, registrar suas refeições e obter
+            recomendações personalizadas. Junte-se a nós nessa jornada para uma alimentação mais equilibrada e descubra
+            como a tecnologia pode transformar seu estilo de vida.
+        </p>
+    </div>
+    <!--FIM-->
+    
+    <!-- Cards Section -->
+    <div class="containercard">
+        <div class="container">
+        <h2 class="text-center mb-4">Destaques</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="/assets/images/card1.jpg" class="card-img-top" alt="Card Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Explorando Novos Sabores</h5>
+                        <p class="card-text">Descubra novos sabores sem comprometer sua dieta!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="/assets/images/card3.jpg" class="card-img-top" alt="Card Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Relação Positiva</h5>
+                        <p class="card-text">Cultive uma relação positiva com todos os aspectos relacionados à alimentação.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="/assets/images/card2.jpg" class="card-img-top" alt="Card Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">No Pain, With Gain!</h5>
+                        <p class="card-text">Perda de peso com mais facilidade e menos restrições.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIM -->
+
+
+    <script src="/assets/js/carrossel.js"></script>
+    <script src="/assets/js/verificaLogin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas</title>
+    <script>
+        // Dados das receitas
+        const receitas = [
+            {
+                "id": 1,
+                "receita": "Pão com ovo",
+                "foto": "/assets/images/paocovo.jpeg",
+                "calorias": 252,
+                "categoria": "Lanche",
+                "quantidade": "100g",
+                "ingredientes": "1 pão, 2 ovos",
+                "link": "https://www.fatsecret.com.br/calorias-nutri%C3%A7%C3%A3o/gen%C3%A9rico/p%C3%A3o-com-ovo",
+                "proteina": 9.78,
+                "carbos": 29,
+                "gorduras": 10.5
+            },
+            {
+                "id": 2,
+                "receita": "Panqueca de banana",
+                "foto": "/assets/images/bananapanc.jpg",
+                "calorias": 119,
+                "categoria": "Lanche",
+                "quantidade": "100g",
+                "ingredientes": "1 Banana, 2 ovos, 2 colheres de sopa de aveia, 1 colher de mel.",
+                "link": "https://www.fatsecret.com.br/calorias-nutri%C3%A7%C3%A3o/gen%C3%A9rico/panqueca-de-banana",
+                "proteina": 3.04,
+                "carbos": 15.23,
+                "gorduras": 5.21
+            },
+            {
+                "id": 3,
+                "receita": "Salada Ceaser",
+                "foto": "/assets/images/salada ceaser.jpg",
+                "calorias": 170,
+                "categoria": "Refeição Completa",
+                "quantidade": "100g",
+                "ingredientes": "alface, 1 fatia de pão integral, 100g de iogurte, 100g de frango, 1 limão",
+                "link": "https://www.fatsecret.com.br/calorias-nutri%C3%A7%C3%A3o/gen%C3%A9rico/salada-caesar",
+                "proteina": 5.03,
+                "carbos": 6.52,
+                "gorduras": 14.17
+            },
+            {
+                "id": 4,
+                "receita": "Mingau de Aveia",
+                "foto": "/assets/images/mingau.jpg",
+                "calorias": 280,
+                "categoria": "Lanche",
+                "quantidade": "100g",
+                "ingredientes": "1/2 xícara leite integral, \n 1 colher de chá canela, \n1/2 colher de chá extrato de baunilha, \n1/2 xícara água, \n2 colheres de sopa aveia em flocos finos, \n1/2 colher de sopa adoçante,  \n1 banana nanica",
+                "link": "https://www.fatsecret.com.br/calorias-nutri%C3%A7%C3%A3o/gen%C3%A9rico/mingau-de-aveia",
+                "proteina": 9.39,
+                "carbos": 47.77,
+                "gorduras": 6.54
+            },
+            {
+                "id": 5,
+                "receita": "Tapioca de frango",
+                "foto": "./assets/images/tapioca.jpg",
+                "calorias": 226,
+                "categoria": "Refeição Completa",
+                "quantidade": "100g",
+                "ingredientes": "1 xícara de tapioca, 70g de frango, 1 colher de sopa de queijo cottage",
+                "link": "https://www.fatsecret.com.br/calorias-nutri%C3%A7%C3%A3o/gen%C3%A9rico/tapioca-de-frango",
+                "proteina": 7.31,
+                "carbos": 44.23,
+                "gorduras": 1.86
+            }
+        ];
+
+        // Função para salvar os dados no localStorage
+        function salvarReceitasNoLocalStorage() {
+            localStorage.setItem('receitas', JSON.stringify(receitas));
+        }
+
+        // Chamar a função quando a página carregar
+    window.onload = salvarReceitasNoLocalStorage;
+    function verificaAdmin() {
+    let user = sessionStorage.getItem("usuarioCorrente");
+    user = JSON.parse(user);
+    if (user && user.login === "admin") {
+        console.log("Admin logado");
+        document.getElementById("cadastroReceitasContainer1").style.display = 'block';
+        document.getElementById("cadastroReceitasContainer2").style.display = 'block';
+    }
+}
+
+function verificaLogin() {
+    let user = sessionStorage.getItem("usuarioCorrente");
+    user = JSON.parse(user);
+    if (user && user.login !== "admin") {
+        console.log("Usuário não-admin está logado");
+        document.getElementById("containerLogin").style.display = 'none';
+        document.getElementById("containerPerfil").style.display = 'block';
+    } else {
+        console.log("Usuário não logado ou admin");
+    }
+}
+
+
+window.onload = function() {
+    verificaAdmin();
+    verificaLogin();
+};
+
+
+    </script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Receitas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/../assets/css/style.css">
+</head>
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/images/logofitflex.PNG" class="img-thumbnail img-small rounded-circle" alt="..."></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navtext collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Página inicial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./sobre.html">Sobre nós</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contato.html">Contato</a>
+          </li>
+          <li class="nav-item" id="containerLogin" style="display: block">
+            <a class="nav-link" href="./login.html" id="loginLink">Login</a>
+          </li>
+          <li class="nav-item" id="containerPerfil" style="display: none">
+              <a class="nav-link" href="./perfil.html" id="loginLink">Meu Perfil</a>
+            </li>
+          <li class="nav-item" id="cadastroReceitasContainer1" style="display: none;">
+            <a class="nav-link" href="./ca.html" id="cadastroAlimento">Cadastro Alimentos</a>
+          </li>
+          <li class="nav-item" id="cadastroReceitasContainer2" style="display: none;">
+            <a class="nav-link" href="./crudReceita.html" id="cadastroReceitas">Cadastro Receitas</a>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<body onload="init()">
+    <h1>Cadastro de Receitas (CRUD)</h1>
+
+    <div class="container">
+        <div class="row">
+            <div id="msg" class="col-sm-10 offset-sm-1 ">
+                <!--<div class="alert alert-warning">Receita não encontrada.</div>-->
+            </div>
+        </div>
+
+        <form id="form-receita">
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <label for="inputId">Id</label>
+                    <input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
+                </div>
+                <div class="col-sm-8">
+                    <label for="inputReceita">Receita (*)</label>
+                    <input type="text" class="form-control" id="inputReceita" required placeholder="Informe a receita">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-5">
+                    <label for="inputCalorias">Calorias (*)</label>
+                    <input type="text" class="form-control" id="inputCalorias" required placeholder="Calorias">
+                </div>
+                <div class="col-sm-7">
+                    <label for="inputCategoria">Categoria (*)</label>
+                    <input type="Categoria" class="form-control" id="inputCategoria" required
+                        placeholder="Informe a categoria">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <label for="inputQuantidade">Quantidade</label>
+                    <input type="text" class="form-control" id="inputQuantidade"
+                        placeholder="Informe a quantidade por porção">
+                </div>
+                <div class="col-sm-6">
+                    <label for="inputIngredientes">Ingredientes</label>
+                    <input type="text" class="form-control" id="inputIngredientes" required
+                        placeholder="Informe os ingredientes da receita">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <small>(*) Campos obrigatórios</small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <input type="button" class="btn btn-success" id="btnInsert" value="Inserir">
+                    <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
+                    <input type="button" class="btn btn-danger" id="btnDelete" value="Excluir">
+                    <input type="button" class="btn btn-secondary" id="btnClear" value="Limpar Form">
+                    <a href="lista_receitas.html"><input type="button" class="btn btn-warning" id="btnClear"
+                            value="Pesquisar Receitas"></a>
+                </div>
+            </div>
+        </form>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <table id="grid-receitas" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Receita</th>
+                            <th scope="col">Calorias</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Ingredientes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-receitas">
+                        <tr>
+                            <td scope="row">1</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="/../assets/js/crudReceitas.js"></script>
+    <script>
+        function exibeReceitas() {
+            tableReceitas = document.getElementById("table-receitas");
+
+            // Remove todas as linhas do corpo da tabela
+            tableReceitas.innerHTML = "";
+
+            readReceita(dados => {
+                // Popula a tabela com os registros do banco de dados
+                for (i = 0; i < dados.length; i++) {
+                    let receita = dados[i];
+                    tableReceitas.innerHTML += `<tr><td scope="row">${receita.id}</td>
+                                                    <td>${receita.receita}</td>
+                                                    <td>${receita.calorias}</td>
+                                                    <td>${receita.categoria}</td>
+                                                    <td>${receita.quantidade}</td>
+                                                    <td>${receita.ingredientes}</td>
+                                                </tr>`;
+                }
+            })
+        }
+        function verificaAdmin() {
+    let user = sessionStorage.getItem("usuarioCorrente");
+    user = JSON.parse(user);
+    if (user && user.login === "admin") {
+        console.log("Admin logado");
+        document.getElementById("cadastroReceitasContainer1").style.display = 'block';
+        document.getElementById("cadastroReceitasContainer2").style.display = 'block';
+    }
+}
+
+function verificaLogin() {
+    let user = sessionStorage.getItem("usuarioCorrente");
+    user = JSON.parse(user);
+    if (user && user.login !== "admin") {
+        console.log("Usuário não-admin está logado");
+        document.getElementById("containerLogin").style.display = 'none';
+        document.getElementById("containerPerfil").style.display = 'block';
+    } else {
+        console.log("Usuário não logado ou admin");
+    }
+}
+
+
+window.onload = function() {
+    verificaAdmin();
+    verificaLogin();
+    init();
+};
+
+        function init() {
+            // Define uma variável para o formulário de receita
+            formReceita = document.getElementById("form-receita");
+
+            // Adiciona funções para tratar os eventos 
+            btnInsert = document.getElementById("btnInsert");
+            btnInsert.addEventListener('click', function () {
+                // Verifica se o formulário está preenchido corretamente
+                if (!formReceita.checkValidity()) {
+                    displayMessage("Preencha o formulário corretamente.");
+                    return;
+                }
+
+                // Obtem os valores dos campos do formulário
+                let campoReceita = document.getElementById('inputReceita').value;
+                let campoCalorias = document.getElementById('inputCalorias').value;
+                let campoCategoria = document.getElementById('inputCategoria').value;
+                let campoQuantidade = document.getElementById('inputQuantidade').value;
+                let campoIngredientes = document.getElementById('inputIngredientes').value;
+                let campoSite = document.getElementById('inputSite').value;
+
+                // Cria um objeto com os dados do receita
+                let receita = {
+                    receita: campoReceita,
+                    calorias: campoCalorias,
+                    categoria: campoCategoria,
+                    quantidade: campoQuantidade,
+                    ingredientes: campoIngredientes,
+                    website: campoSite
+                };
+
+                // Cria o receita no banco de dados
+                createReceita(receita, exibeReceitas);
+
+                // Limpa o formulario
+                formReceita.reset()
+            });
+
+            // Trata o click do botão Alterar
+            btnUpdate = document.getElementById("btnUpdate");
+            btnUpdate.addEventListener('click', function () {
+                // Obtem os valores dos campos do formulário
+                let campoId = document.getElementById("inputId").value;
+                if (campoId == "") {
+                    displayMessage("Selecione antes um receita para ser alterado.");
+                    return;
+                }
+
+                // Obtem os valores dos campos do formulário
+                let campoReceita = document.getElementById('inputReceita').value;
+                let campoCalorias = document.getElementById('inputCalorias').value;
+                let campoCategoria = document.getElementById('inputCategoria').value;
+                let campoQuantidade = document.getElementById('inputQuantidade').value;
+                let campoIngredientes = document.getElementById('inputIngredientes').value;
+                let campoSite = document.getElementById('inputSite').value;
+
+                // Cria um objeto com os dados do receita
+                let receita = {
+                    receita: campoReceita,
+                    calorias: campoCalorias,
+                    categoria: campoCategoria,
+                    quantidade: campoQuantidade,
+                    ingredientes: campoIngredientes,
+                    website: campoSite
+                };
+
+                // Altera o receita no banco de dados
+                updateReceita(parseInt(campoId), receita, exibeReceitas);
+
+                // Limpa o formulario
+                formReceita.reset()
+            });
+
+            // Trata o click do botão Excluir
+            btnDelete = document.getElementById('btnDelete');
+            btnDelete.addEventListener('click', function () {
+                let campoId = document.getElementById('inputId').value;
+                if (campoId == "") {
+                    displayMessage("Selecione um receita a ser excluída.");
+                    return;
+                }
+
+                // Exclui o receita no banco de dados
+                deleteReceita(parseInt(campoId), exibeReceitas);
+
+                // Limpa o formulario
+                formReceita.reset()
+            });
+
+            // Trata o click do botão Listar Receitas
+            btnClear = document.getElementById('btnClear');
+            btnClear.addEventListener('click', function () {
+                formReceita.reset()
+            });
+
+            // Oculta a mensagem de aviso após alguns 5 segundos
+            msg = document.getElementById('msg');
+            msg.addEventListener("DOMSubtreeModified", function (e) {
+                if (e.target.innerHTML == "") return;
+                setTimeout(function () {
+                    alert = msg.getElementsByClassName("alert");
+                    alert[0].remove();
+                }, 5000);
+            })
+
+            // Preenche o formulário quando o usuario clicar em uma linha da tabela 
+            gridReceitas = document.getElementById("grid-receitas");
+            gridReceitas.addEventListener('click', function (e) {
+                if (e.target.tagName == "TD") {
+
+                    // Obtem as colunas da linha selecionada na tabela
+                    let linhaReceita = e.target.parentNode;
+                    colunas = linhaReceita.querySelectorAll("td");
+
+                    // Preenche os campos do formulário com os dados da linha selecionada na tabela
+                    document.getElementById('inputId').value = colunas[0].innerText;
+                    document.getElementById('inputReceita').value = colunas[1].innerText;
+                    document.getElementById('inputCalorias').value = colunas[2].innerText;
+                    document.getElementById('inputCategoria').value = colunas[3].innerText;
+                    document.getElementById('inputQuantidade').value = colunas[4].innerText;
+                    document.getElementById('inputIngredientes').value = colunas[5].innerText;
+                    document.getElementById('inputSite').value = colunas[6].innerText;
+                }
+            });
+
+            exibeReceitas();
+        }
+  
+    </script>
+   

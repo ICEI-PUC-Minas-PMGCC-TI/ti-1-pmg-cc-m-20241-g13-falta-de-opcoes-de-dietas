@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Receitas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <h1>Listagem de Receitas</h1>
+
+    <div class="container">
+        <div class="row">
+            <div id="msg" class="col-sm-10 offset-sm-1 ">
+                <!--<div class="alert alert-warning">Contato não encontrado.</div>-->
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="msg" class="col-sm-2 offset-sm-10 ">
+                <a href="index.html"><input type="button" class="btn btn-warning" id="btnClear" value="Cadastro"></a>
+            </div>
+        </div>
+
+        <form id="form-receita">
+            <div class="form-group row">
+                <div class="col-sm-8">
+                    <select name="filtro_categoria" id="filtro_categoria" onchange="ListaReceitas()"
+                        class="form-control">
+                        <option value="">Selecione a Categoria</option>
+                        <option value="lanche">Lanche</option>
+                        <option value="refeição">Refeição Completa</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <table id="grid-receitas" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Receita</th>
+                            <th scope="col">Calorias</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Ingredientes</th>
+                            <th scope="col">Site</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-receitas">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+    <script>
+        // carrega os dados a partir da API JSONServer
+        var db = []
+        readContato(dados => {
+            db = dados;
+            ListaReceitas()
+        });
+
+        // função para listar na tabela os receitas que estão associados aos filtros 
+        function ListaReceitas() {
+
+            // Obtem os dados informados pelo usuário nos filtros
+            let fcg = document.getElementById('filtro_categoria').value;
+
+            // limpa a lista de receitas apresentados
+            tableReceitas = document.getElementById("table-receitas");
+            tableReceitas.innerHTML = "";
+
+            // Popula a tabela com os registros do banco de dados
+            for (let index = 0; index < db.length; index++) {
+                const receita = db[index];
+
+                // Verifica se os dados do receita batem com os filtros
+                if (((receita.categoria == fcg) || (fcg == ''))) {
+
+                    // Inclui a receita na tabela    
+                    tableReceitas.innerHTML += `<tr><td scope="row">${receita.id}</td>
+                                                    <td>${receita.receita}</td>
+                                                    <td>${receita.calorias}</td>
+                                                    <td>${receita.categoria}</td>
+                                                    <td>${receita.quantidade}</td>
+                                                    <td>${receita.ingredientes}</td>
+                                                    <td>${receita.website}</td>
+                                                </tr>`;
+                }
+            }
+
+
+        }
+        function verificaAdmin() {
+    let user = sessionStorage.getItem("usuarioCorrente");
+    user = JSON.parse(user);
+    if (user && user.login === "admin") {
+        console.log("Admin logado");
+        document.getElementById("cadastroReceitasContainer1").style.display = 'block';
+        document.getElementById("cadastroReceitasContainer2").style.display = 'block';
+    }
+}
+
+function verificaLogin() {
+    let user = sessionStorage.getItem("usuarioCorrente");
+    user = JSON.parse(user);
+    if (user && user.login !== "admin") {
+        console.log("Usuário não-admin está logado");
+        document.getElementById("containerLogin").style.display = 'none';
+        document.getElementById("containerPerfil").style.display = 'block';
+    } else {
+        console.log("Usuário não logado ou admin");
+    }
+}
+
+
+window.onload = function() {
+    verificaAdmin();
+    verificaLogin();
+};
+    </script>
+
+</body>
+
+</html>

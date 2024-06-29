@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/comentario.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>Fit Flex - Comentários</title>
+</head>
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/images/logofitflex.PNG" class="img-thumbnail img-small rounded-circle" alt="..."></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navtext collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Página inicial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./sobre.html">Sobre nós</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contato.html">Contato</a>
+          </li>
+          <li class="nav-item" id="containerLogin" style="display: block">
+            <a class="nav-link" href="./login.html" id="loginLink">Login</a>
+          </li>
+          <li class="nav-item" id="containerPerfil" style="display: none">
+              <a class="nav-link" href="./perfil.html" id="loginLink">Meu Perfil</a>
+            </li>
+          <li class="nav-item" id="cadastroReceitasContainer1" style="display: none;">
+            <a class="nav-link" href="./ca.html" id="cadastroAlimento">Cadastro Alimentos</a>
+          </li>
+          <li class="nav-item" id="cadastroReceitasContainer2" style="display: none;">
+            <a class="nav-link" href="./crudReceita.html" id="cadastroReceitas">Cadastro Receitas</a>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<body onload="init()">
+    <h1>Cadastro de Comentários</h1>
+
+    <div class="container">
+        <form id="form-coments">
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <label for="inputId">Id</label>
+                    <input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
+                </div>
+                <div class="col-sm-8">
+                    <label for="inputNome">Seu nome:</label>
+                    <p id="mostraNome"></p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <label for="inputMsg">Mensagem</label>
+                    <input type="text" class="textarea-comentario" id="inputMSG" required placeholder="Digite aqui">
+                </div>
+            </div>
+            <div class="form-group row text-center">
+                <div class="col-sm-12">
+                    <input type="button" class="btn btn-success" id="btnInsert" value="Comentar">
+                    <input type="button" class="btn btn-warning" id="btnUpdate" value="Editar">
+                    <input type="button" class="btn btn-danger" id="btnDelete" value="Deletar">
+                    <input type="button" class="btn btn-secondary" id="btnClear" value="Redefinir">
+                    <input type="button" class="btn btn-success" id="btnVoltar" value="Voltar">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+        
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <table id="grid-contatos" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Mensagem</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-coments">
+                        <tr>
+                            <td scope="row">1</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/js/crudMSG.js"></script>
+    <script src="/assets/js/verificaLogin.js"></script>
+    <script>
+        function exibeComentario() {
+            tableComents = document.getElementById("table-coments");
+
+            // Remove todas as linhas do corpo da tabela
+            tableComents.innerHTML = "";
+
+            readComents (dados => {
+                // Popula a tabela com os registros do banco de dados
+                for (i = 0; i < dados.length; i++) {
+                    let comentario = dados[i];    
+                        tableComents.innerHTML += `<tr><td scope="row">${comentario.id}</td>
+                                                    <td>${comentario.nome}</td>
+                                                    <td>${comentario.texto}</td>
+                                                </tr>`;
+                }
+            })
+        }
+        function verificaAdmin() {
+    let user = sessionStorage.getItem("usuarioCorrente");
+    user = JSON.parse(user);
+    if (user && user.login === "admin") {
+        console.log("Admin logado");
+        document.getElementById("cadastroReceitasContainer1").style.display = 'block';
+        document.getElementById("cadastroReceitasContainer2").style.display = 'block';
+    }
+}
+
+function verificaLogin() {
+    let user = sessionStorage.getItem("usuarioCorrente");
+    user = JSON.parse(user);
+    if (user && user.login !== "admin") {
+        console.log("Usuário não-admin está logado");
+        document.getElementById("containerLogin").style.display = 'none';
+        document.getElementById("containerPerfil").style.display = 'block';
+    } else {
+        console.log("Usuário não logado ou admin");
+    }
+}
+
+
+window.onload = function() {
+    verificaAdmin();
+    verificaLogin();
+    init();
+};
+
+        function mostraNome(){
+            let user = sessionStorage.getItem("usuarioCorrente");
+            user = JSON.parse(user)
+            const nome = user.nome
+            let elemento = document.getElementById('mostraNome')
+            elemento.textContent = nome;
+        }
+        function init() {
+            // Define uma variável para o formulário de contato
+            formComents = document.getElementById("form-coments");
+            mostraNome();
+
+            // Adiciona funções para tratar os eventos 
+            btnInsert = document.getElementById("btnInsert");
+            btnInsert.addEventListener ('click', function () {
+                // Verifica se o formulário está preenchido corretamente
+                if (!formComents.checkValidity()) {
+                    displayMessage("Preencha o formulário corretamente.");
+                    return;
+                }
+
+                // Obtem os valores dos campos do formulário
+                let campoNome = document.getElementById ('mostraNome').textContent;
+                let campoMsg = document.getElementById ('inputMSG').value;
+
+
+                // Cria um objeto com os dados do contato
+                let comentario = { nome: campoNome, 
+                    texto: campoMsg };
+
+                // Cria o contato no banco de dados
+                createComents(comentario, exibeComentario);
+
+                // Limpa o formulario
+                    formComents.reset()
+            });
+
+            // Trata o click do botão Alterar
+            btnUpdate = document.getElementById("btnUpdate");
+            btnUpdate.addEventListener ('click', function () {
+                // Obtem os valores dos campos do formulário
+                let campoId = document.getElementById("inputId").value;
+                if (campoId == "") {
+                    displayMessage("Selecione um comentário para ser alterado.");
+                    return;
+                }
+
+                // Obtem os valores dos campos do formulário
+                let campoNome = document.getElementById ('mostraNome').textContent;
+                let campoMsg = document.getElementById('inputMSG').value;
+
+                
+                // Cria um objeto com os dados do contato
+                let comentario = { nome: campoNome, 
+                    texto: campoMsg };
+
+                // Altera o contato no banco de dados
+                updateComents(parseInt(campoId), comentario, exibeComentario);
+
+                // Limpa o formulario
+                    formComents.reset()
+            });
+
+            // Trata o click do botão Excluir
+            btnDelete = document.getElementById('btnDelete');
+            btnDelete.addEventListener ('click', function () {
+                let campoId = document.getElementById('inputId').value;
+                if (campoId == "") {
+                    displayMessage("Selecione uma mensagem a ser excluído.");
+                    return;
+                }
+
+                // Exclui o contato no banco de dados
+                deleteComents(parseInt(campoId), exibeComentario);
+
+                // Limpa o formulario
+                formComents.reset()
+            });
+
+            // Trata o click do botão Listar Contatos
+            btnClear = document.getElementById('btnClear');
+            btnClear.addEventListener ('click', function () {                
+                    formComents.reset()
+            });
+
+            btnVoltar = document.getElementById('btnVoltar');
+            btnVoltar.addEventListener('click', function() {
+            window.location.href = '/pages/exibMSG.html'; // Substitua pela URL correta se necessário
+        });
+
+            // Oculta a mensagem de aviso após alguns 5 segundos
+ 
+
+            // Preenche o formulário quando o usuario clicar em uma linha da tabela 
+            gridContatos = document.getElementById("grid-contatos");
+            gridContatos.addEventListener('click', function (e) {
+                if (e.target.tagName == "TD") { 
+
+                    // Obtem as colunas da linha selecionada na tabela
+                    let linhaContato = e.target.parentNode;
+                    let nomeAutor = document.getElementById('mostraNome').textContent;
+                    colunas = linhaContato.querySelectorAll("td");
+                    if (colunas[1].innerText === nomeAutor) {
+                    
+                    // Preenche os campos do formulário com os dados da linha selecionada na tabela
+                    document.getElementById ('inputId').value = colunas[0].innerText;
+                    document.getElementById ('mostraNome').textContent = colunas[1].innerText;
+                    document.getElementById ('inputMSG').value = colunas[2].innerText;
+                    }
+                }
+            });
+
+                exibeComentario();
+        }
+
+    </script>
+</body>
+
+</html>

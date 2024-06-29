@@ -1,0 +1,143 @@
+.img-small {
+    background-color: rgb(55, 57, 54);
+    color: rgb(55, 57, 54);
+    width: 10%;
+    border:rgb(55, 57, 54);
+    padding: 1%;
+}
+.navbar{
+    margin-bottom: 2%;
+    background-color: rgb(131, 171, 40);
+}
+
+
+
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Garante que o contêiner tenha a mesma largura do pai */
+}
+
+.select-wrapper .bi-search {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Garante que o ícone não interfira na interação com o select */
+}
+
+.select-wrapper select {
+    padding-left: 30px; /* Ajuste o padding para acomodar o ícone */
+    width: 100%; /* Garante que o select ocupe toda a largura disponível */
+    box-sizing: border-box; /* Inclui o padding no cálculo da largura */
+}
+/* Estilizando a barra de pesquisa */
+#filtro_categoria {
+    background-color: #bcbcbc; /* Cor de fundo da barra de pesquisa */
+    border: 1px solid rgb(55, 57, 54); /* Adiciona uma borda para destacar a barra de pesquisa */
+    border-radius: 5px; /* Adiciona cantos arredondados */
+    padding: 8px 12px; /* Adiciona espaço interno para o texto */
+    width: 100%; /* Define a largura da barra de pesquisa */
+}
+footer {
+    background-color: #bcbcbc;
+    color:  rgb(131, 171, 40);
+    text-align:left;
+    position: fixed;
+    bottom: 100px;
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+}
+
+
+/* Container principal que ocupa toda a altura da tela */
+.container {
+    min-height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Estilo do rodapé */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #bcbcbc;
+    padding: 0px;
+    width: 100%;
+    width: calc(100% - 20px); /* Reduz a largura do rodapé */
+    padding: 10px 10px 10px 10px; /* Ajusta o padding */
+    box-sizing: border-box; /* Inclui o padding no cálculo da largura */
+}
+
+.footer a {
+    margin: 0; 
+}
+
+.footer button {
+    margin-left: auto; 
+}
+
+/* Estilo para contêiner de botões dentro da célula da tabela */
+.btn-container {
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+/* Estilo para células da tabela */
+td {
+    position: relative;
+    padding-inline-end: 1px;
+    
+}
+
+/* Botão personalizado */
+.btn-custom {
+    padding: 2px 5px;
+    font-size: 12px;
+    width: 30px;
+    right: 0px;
+    margin-left: 10%;
+}
+
+.custom-table td {
+    position: relative;
+    padding-right: 100px;
+}
+
+/* Tabela personalizada */
+.custom-table {
+    width: 100%; /* Ajuste a largura conforme necessário */
+    margin: 0; /* Centraliza a tabela */
+}
+
+body {
+    margin: 0px; /* Remove margens padrão */
+    padding-bottom: 100%; /* Espaço para o rodapé fixo */
+}
+
+.btn-footer{
+    color: rgb(20, 81, 18)!important;
+    background-color: rgb(131, 171, 40);
+    border: 1px solid rgb(131, 171, 40);
+}
+.footer-text {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    color:  rgb(0, 0, 0);
+    font-size: 130%;
+    position: fixed;
+    bottom: 0;
+    width: 80%;
+    border-radius: 5px;
+    background-color:#bcbcbc; 
+    text-align: left;
+    padding: 20px;
+    margin-bottom: 2%;
+}
+

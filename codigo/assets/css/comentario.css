@@ -1,0 +1,72 @@
+
+
+
+.img-small {
+    background-color: rgb(55, 57, 54);
+    color: rgb(55, 57, 54);
+    width: 10%;
+    border: rgb(55, 57, 54);
+    padding: 1%;
+}
+.navbar{
+    margin-bottom: 2%;
+    background-color: rgb(131, 171, 40);
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; 
+}
+
+#comentarios {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 40px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px; 
+    margin-top: 0;
+}
+
+.mensagem-comentario {
+    border: 1px solid #02bd34; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    background-color: #c2fbc2; 
+    border-radius: 50px;
+}
+
+.chat-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Aumentado de 10px 20px para 15px 30px */
+    cursor: pointer;
+    margin: auto;
+    display: block;
+    height: 50px; /* Altura definida */
+    width: 150px; /* Largura definida */
+    top: 50%
+}
+
+
+.textarea-comentario {
+    border: 1px solid #6c757d; 
+    padding: 10px;
+    margin: auto; 
+    background-color: #e9ecef; 
+    border-radius: 10px;
+    width: 50%; 
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    padding: 50px;
+}

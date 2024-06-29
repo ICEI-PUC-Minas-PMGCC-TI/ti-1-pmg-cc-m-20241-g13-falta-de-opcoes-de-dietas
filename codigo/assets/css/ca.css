@@ -1,0 +1,34 @@
+label {
+    font-weight: bolder;
+  }
+  ::placeholder {
+    color: lightskyblue !important;
+    opacity: 3;
+  }
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:  lightskyblue !important;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:  lightskyblue !important;
+    opacity:  3;
+  }
+  h1 {
+     text-align: center;
+  }
+  #msg {
+     height: 60px;
+  }
+  #grid-alimentos tbody {
+     cursor: pointer;
+  }
+  .img-small {
+    background-color: rgb(55, 57, 54);
+    color: rgb(55, 57, 54);
+    width: 10%;
+    border:rgb(55, 57, 54);
+    padding: 1%;
+}
+.navbar{
+    margin-bottom: 2%;
+    background-color: rgb(131, 171, 40);
+}

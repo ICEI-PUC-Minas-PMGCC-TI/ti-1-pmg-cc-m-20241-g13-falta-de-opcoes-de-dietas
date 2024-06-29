@@ -1,0 +1,133 @@
+<!--Não deixar ficar a quantidade  negativa-->
+<!--Não zerar as quantidades quando mudar de categoria-->
+<!--Não deixar os alimentos ficarem atras do footer-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/selecao_alimentos.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>FIT FLEX</title>
+</head>
+
+<!--**********************************************************************************************************************************-->
+
+<!-- NAVBAR -->
+
+<body onload="exibe()">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/images/logofitflex.PNG" class="img-thumbnail img-small rounded-circle" alt="..."></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navtext collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Página inicial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./sobre.html">Sobre nós</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contato.html">Contato</a>
+          </li>
+          <li class="nav-item" id="containerLogin" style="display: block">
+            <a class="nav-link" href="./login.html" id="loginLink">Login</a>
+          </li>
+          <li class="nav-item" id="containerPerfil" style="display: none">
+              <a class="nav-link" href="./perfil.html" id="loginLink">Meu Perfil</a>
+            </li>
+          <li class="nav-item" id="cadastroReceitasContainer1" style="display: none;">
+            <a class="nav-link" href="./ca.html" id="cadastroAlimento">Cadastro Alimentos</a>
+          </li>
+          <li class="nav-item" id="cadastroReceitasContainer2" style="display: none;">
+            <a class="nav-link" href="./crudReceita.html" id="cadastroReceitas">Cadastro Receitas</a>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!--**********************************************************************************************************************************-->
+      
+<!-- PESQUISA -->
+      
+  <div class="container">
+    <form id="form-alimento">            
+      <div class="form-group row">
+        <div class="col-sm-8">
+          <select name="filtro_categoria" id="filtro_categoria" onchange="Listaalimentos()"  class="form-control">
+            <option value="">Categoria</option>
+            <option value="café da manhã">café da manhã</option>
+            <option value="almoço/janta">almoço/janta</option>
+            <option value="lanches">lanches</option>
+          </select>
+        </div>
+      </div>
+    </form>
+
+<!--**********************************************************************************************************************************-->
+    
+<table id="food-table">
+  <thead>
+      <tr>
+        <th>Quantidade</th>
+          <th>Nome</th>
+          <th>Calorias</th>
+          <th>Gramas</th>
+      </tr>
+  </thead>
+  <tbody id="table-alimentos">
+      <!-- Aqui serão exibidos os alimentos -->
+  </tbody>
+</table>
+
+
+<div class="footer-text">
+  <p>Total de calorias: <span id="total-calories">0</span></p>
+    <button type="button" class="btn btn-success btn-footer" onclick="buscaReceita()" >Buscar Receitas</button>
+</div>
+
+<script>
+  let totalCalorias = 0;
+
+// Função para somar as calorias
+function addCalorias(calorias, nome) {
+    totalCalorias += calorias;
+      totalCaloriasSpan.textContent = totalCalorias;
+      contador(1, nome);
+}
+
+// Função para subtrair as calorias
+function removeCalorias(calorias, nome) {
+    if(totalCalorias > 0){
+      let num = parseInt(nome.textContent, 10); // Obtendo o valor do elemento
+      if(num > 0){
+        totalCalorias -= calorias;
+        totalCaloriasSpan.textContent = totalCalorias;
+        contador(-1, nome);
+      }
+    }
+  }
+
+function contador(numero, nome){
+    let cont = document.getElementById(nome); // Obtendo o elemento correto
+    console.log(nome); // Nome do elemento (id)
+    let num = parseInt(nome.textContent, 10); // Obtendo o valor do elemento
+    num = num + numero; // Atualizando o valor
+    console.log(num); // Exibindo o valor atualizado
+    nome.textContent = num.toString(); // Atualizando o conteúdo do elemento
+}
+
+
+
+</script>
+  <script src="./../assets/js/selecao_alimentos.js"></script>
+  
+</body>
+</html>
