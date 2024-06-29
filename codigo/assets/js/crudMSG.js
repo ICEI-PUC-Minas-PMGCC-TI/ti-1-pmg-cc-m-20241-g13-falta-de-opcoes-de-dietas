@@ -55,13 +55,13 @@ function updateComents(id, comentario, refreshFunction) {
     })
         .then(response => response.json())
         .then(data => {
-            displayMessage("Comentário alterado com sucesso");
+  
             if (refreshFunction)
                 refreshFunction();
         })
         .catch(error => {
             console.error('Erro ao atualizar contato via API JSONServer:', error);
-            displayMessage("Erro ao atualizar contato");
+
         });
 }
 

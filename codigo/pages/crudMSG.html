@@ -35,7 +35,7 @@
         </div>
       </div>
     </nav>
-<body onload="init()">
+<body onload="initAndVerifyLogin()">
     <h1>Cadastro de Comentários</h1>
 
     <div class="container">
@@ -62,6 +62,7 @@
                     <input type="button" class="btn btn-warning" id="btnUpdate" value="Editar">
                     <input type="button" class="btn btn-danger" id="btnDelete" value="Deletar">
                     <input type="button" class="btn btn-secondary" id="btnClear" value="Redefinir">
+                    <input type="button" class="btn btn-success" id="btnVoltar" value="Voltar">
                 </div>
             </div>
         </form>
@@ -95,6 +96,7 @@
     </div>
 
     <script src="/assets/js/crudMSG.js"></script>
+    <script src="/assets/js/verificaLogin.js"></script>
     <script>
         function exibeComentario() {
             tableComents = document.getElementById("table-coments");
@@ -199,6 +201,11 @@
                     formComents.reset()
             });
 
+            btnVoltar = document.getElementById('btnVoltar');
+            btnVoltar.addEventListener('click', function() {
+            window.location.href = '/pages/exibMSG.html'; // Substitua pela URL correta se necessário
+        });
+
             // Oculta a mensagem de aviso após alguns 5 segundos
  
 
@@ -209,12 +216,15 @@
 
                     // Obtem as colunas da linha selecionada na tabela
                     let linhaContato = e.target.parentNode;
+                    let nomeAutor = document.getElementById('mostraNome').textContent;
                     colunas = linhaContato.querySelectorAll("td");
+                    if (colunas[1].innerText === nomeAutor) {
                     
                     // Preenche os campos do formulário com os dados da linha selecionada na tabela
                     document.getElementById ('inputId').value = colunas[0].innerText;
                     document.getElementById ('mostraNome').textContent = colunas[1].innerText;
                     document.getElementById ('inputMSG').value = colunas[2].innerText;
+                    }
                 }
             });
 

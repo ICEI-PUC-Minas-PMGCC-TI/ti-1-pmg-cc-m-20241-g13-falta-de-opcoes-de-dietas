@@ -144,57 +144,13 @@
       "id": 1
     },
     {
-      "nome": "Gabriel",
-      "texto": "Não gostei",
-      "id": 2,
-      "receitaID": 2
+      "texto": "Testando",
+      "id": 2
     },
     {
-      "nome": "Luisa",
-      "texto": "Não gostei",
-      "id": 4,
-      "receitaID": 3
-    },
-    {
-      "nome": "Teste",
-      "texto": "Teste",
-      "id": 27
-    },
-    {
-      "nome": "Gustavo",
-      "texto": "Os ingredientes estão fora do meu orçamento",
-      "id": 5,
-      "receitaID": 4
-    },
-    {
-      "nome": "Matheus",
-      "texto": "aa",
-      "id": 28
-    },
-    {
-      "nome": "Teste",
-      "texto": "Adorei a receita",
-      "id": 29
-    },
-    {
-      "nome": "Fit Flex",
-      "texto": "teste",
-      "id": 30
-    },
-    {
-      "nome": "Fit Flex",
-      "texto": "teste",
-      "id": 31
-    },
-    {
-      "nome": "Fit Flex",
-      "texto": "a",
-      "id": 32
-    },
-    {
-      "nome": "Fit Flex",
-      "texto": "a",
-      "id": 33
+      "nome": "MatheusTPG",
+      "texto": "Testando123",
+      "id": 3
     }
   ]
 }
