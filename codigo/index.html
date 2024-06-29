@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fit Flex - Perfil do Usuário</title>
-  <link rel="stylesheet" href="/codigo/assets/css/style.css">
+  <link rel="stylesheet" href="../codigo/assets/css/style.css">
 </head>
 
 <body>
   <header>
     <div class="logo">
-      <img src="/codigo/assets/imgs/img/logofitflex (1).PNG" class="img-thumbnail img-small rounded-circle" alt="..."></a>
+      <img src="../codigo/assets/imgs/img/logofitflex (1).PNG" class="img-thumbnail img-small rounded-circle" alt="..."></a>
       </div>
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -29,7 +29,7 @@
                   <a class="nav-link" href="#">Contato</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="indexL.html">Login</a>
+                  <a class="nav-link" href="../codigo/pages/indexL.html">Login</a>
                 </li>
               </ul>
             </div>
@@ -38,32 +38,39 @@
       </nav>
   </header>
   <div class="container">
-    <div class="profile">
-      <img id="fotoPerfil" alt="Foto do Usuário" style="max-width: 200px; display: block;">
-     <pre id="perfilJson"></pre>
+    <div class="profile-info">
+        <img id="user-pic" alt="Foto do Usuário" style="max-width: 200px; display: block;border-radius: 50%;object-fit:unset;height: 150px;width: 150px;">
+        <div id="content">
+          <h2 id="name"></h2>
+          <p  id="age"></p>
+          <p id="weight"></p>
+          <p id="height"></p>
+          <p id="tel"></p>
+          <p id="sex"></p>
+        </div>
         <button id="edit-btn">Editar</button>
       </div>
     </div>
     <div class="favorites">
-      <a class="ReceitasFav" href="/codigo/pages/indexL.html">Receitas favoritas:</a>
+      <a class="ReceitasFav" href="##">Mais receitas:</a>
       <div class="recipes">
         <div class="recipe">
           <h3>Salada Ceaser</h3>
-          <img src="/codigo/assets/imgs/img/salada.jpeg" alt="Salada Ceaser">
+          <img src="../codigo/assets/imgs/img/salada.jpeg" alt="Salada Ceaser">
         </div>
         <div class="recipe">
           <h3>Pão com ovo</h3>
-          <img src="/codigo/assets/imgs/img/Pão.jpg" alt="Pão com ovo">
+          <img src="../codigo/assets/imgs/img/Pão.jpg" alt="Pão com ovo">
         </div>
         <div class="recipe">
           <h3>Frango grelhado</h3>
-          <img src="/codigo/assets/imgs/img/frango.jpeg" alt="Frango grelhado">
+          <img src="../codigo/assets/imgs/img/frango.jpeg" alt="Frango grelhado">
         </div>
       </div>
     </div>
   </div>
 
-  <script src="/codigo/assets/js/script.js"></script>
+  <script src="../codigo/assets/js/script.js"></script>
 </body>
 
 </html>
