@@ -1,4 +1,4 @@
-function verificaLogin(){
+function verificaAdmin(){
     let user = sessionStorage.getItem("usuarioCorrente");
     user = JSON.parse(user)
     if(user.login === "admin"){
@@ -9,5 +9,15 @@ function verificaLogin(){
 }
 function initAndVerifyLogin() {
     init(); // Chama a primeira função
-    verificaLogin(); // Chama a segunda função
+    verificaLogin();// Chama a segunda função
+    verificaAdmin();
+}
+
+function verificaLogin() {
+    let user = sessionStorage.getItem("usuarioCorrente");
+    if (user) {
+        console.log("Usuário está logado");
+        document.getElementById("containerLogin").setAttribute('style', 'display: none;');
+        document.getElementById("containerPerfil").setAttribute('style', 'display: block;');
+    }
 }

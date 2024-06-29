@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body onload="initAndVerifyLogin()">
+<body onload="verificaLogin()">
 
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
@@ -26,16 +26,19 @@
               <a class="nav-link" href="../index.html">Página inicial</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/pages/sobre.html">Sobre nós</a>
+              <a class="nav-link active" aria-current="page" href="./sobre.html">Sobre nós</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pages/contato.html">Contato</a>
+              <a class="nav-link" href="./contato.html">Contato</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/pages/login.html" id="loginLink">Login</a>
+            <li class="nav-item" id="containerLogin" style="display: block">
+              <a class="nav-link" href="./pages/login.html" id="loginLink">Login</a>
             </li>
+            <li class="nav-item" id="containerPerfil" style="display: none">
+                <a class="nav-link" href="./pages/perfil.html" id="loginLink">Meu Perfil</a>
+              </li>
             <li class="nav-item" id="cadastroReceitasContainer1" style="display: none;">
-              <a class="nav-link" href="/pages/ca.html" id="cadastroAlimento">Cadastro Alimentos</a>
+              <a class="nav-link" href="./ca.html" id="cadastroAlimento">Cadastro Alimentos</a>
             </li>
             <li class="nav-item" id="cadastroReceitasContainer2" style="display: none;">
               <a class="nav-link" href="#" id="cadastroReceitas">Cadastro Receitas</a>
