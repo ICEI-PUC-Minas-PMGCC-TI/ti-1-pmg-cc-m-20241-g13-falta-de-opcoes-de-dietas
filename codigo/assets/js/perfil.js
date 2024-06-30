@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let favoriteId = favoriteRecipes[0]; // Supondo que você quer mostrar o primeiro favorito da lista
 
-    fetch("/assets/db/dbAlimentos.json")
+    fetch("../assets/db/dbAlimentos.json")
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erro ao buscar dados: ' + response.statusText);

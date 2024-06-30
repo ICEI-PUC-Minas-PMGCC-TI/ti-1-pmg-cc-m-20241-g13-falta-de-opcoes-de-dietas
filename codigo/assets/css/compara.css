@@ -393,4 +393,19 @@
     transform: translateY(0); /* Reverte o efeito de elevação ao clicar */
   }
   
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+  }
+  
+
+  .compara {
+    animation: fadeIn 1s ease-in-out forwards;
+  }
     

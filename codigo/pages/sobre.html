@@ -47,6 +47,7 @@
     </div>
   </div>
 </nav>
+<div class="sobre">
       <div class="container">
         <img src="../assets/images/nutricionista.png" class="nutri" alt=""></img>
         <div class="container-texto">
@@ -58,22 +59,31 @@
       </div>
       <br>
 
-        <div class="imgs">
-          <img src="../assets/images/nutricao (1).png" class="img-thumbnail-footer" style="max-width: 100%" alt="imagem">
-          <img src="../assets/images/dieta (1) (1).png" class="img-thumbnail-footer" style="max-width: 100%" alt="imagem">
-          <img src="../assets/images/dieta (2) (1).png" class="img-thumbnail-footer" style="max-width: 100%" alt="imagem">
-          <img src="../assets/images/dieta-balanceada (1).png" class="img-thumbnail-footer" style="max-width: 100%" alt="imagem">
-          <img src="../assets/images/dieta (3) (1).png" class="img-thumbnail-footer" style="max-width: 100%" alt="imagem">
-      </div>
-      <div class="nome-footer">
-        <p >Uma vida mais saudável</p>
-        <p >Otimizar seus resultados</p>
-        <p >Construir sua dieta</p>
-        <p >Aproveitar a vida sem se restringir</p>
-        <p >Comer de forma gostosa e saudável</p>
+<!-- Estrutura HTML com divs agrupando cada imagem e texto -->
+<div class="container-footer">
+  <div class="item-footer">
+      <img src="../assets/images/nutricao (1).png" class="img-thumbnail-footer" alt="imagem">
+      <p>Uma vida mais saudável</p>
+  </div>
+  <div class="item-footer">
+      <img src="../assets/images/dieta (1) (1).png" class="img-thumbnail-footer" alt="imagem">
+      <p>Otimizar seus resultados</p>
+  </div>
+  <div class="item-footer">
+      <img src="../assets/images/dieta (2) (1).png" class="img-thumbnail-footer" alt="imagem">
+      <p>Construir sua dieta</p>
+  </div>
+  <div class="item-footer">
+      <img src="../assets/images/dieta-balanceada (1).png" class="img-thumbnail-footer" alt="imagem">
+      <p>Aproveitar a vida sem se restringir</p>
+  </div>
+  <div class="item-footer">
+      <img src="../assets/images/dieta (3) (1).png" class="img-thumbnail-footer" alt="imagem">
+      <p>Comer de forma gostosa e saudável</p>
+  </div>
+</div>
 
-      </div>
-      <script src="./../assets/js/verificaLogin.js"></script>
+    </div>
       <script>
         function verificaAdmin() {
     let user = sessionStorage.getItem("usuarioCorrente");

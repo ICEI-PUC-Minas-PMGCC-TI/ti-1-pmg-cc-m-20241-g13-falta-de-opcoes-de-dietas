@@ -38,12 +38,50 @@ h4 {
     grid-template-columns: 1fr 3fr; /* Define duas colunas */
     grid-gap: 20px; /* Espaçamento entre as colunas */
 }
-.imgs{
-    display: flex;
-    justify-content: space-evenly;
-    
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
-.nome-footer{
-    display: flex;
-    justify-content: space-evenly;
+
+
+.sobre {
+    animation: fadeIn 1s ease-in-out forwards;
 }
+
+/* CSS para alinhar imagem e texto */
+.container-footer {
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.item-footer {
+    display: inline-block; /* Permite que os itens fiquem lado a lado */
+    margin: 10px; /* Espaçamento entre os itens */
+}
+
+.img-thumbnail-footer {
+    max-width: 100%;
+    display: block;
+    margin-bottom: 15px; /* Ajuste este valor conforme necessário para igualar o espaçamento */
+}
+
+.imgs, .nome-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.imgs img, .nome-footer p {
+    margin: 10px 0; /* Ajuste o valor de margem conforme necessário */
+}
+
+

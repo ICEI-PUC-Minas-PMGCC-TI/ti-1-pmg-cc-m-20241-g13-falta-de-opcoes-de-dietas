@@ -42,7 +42,7 @@ document.getElementById('cadastroForm').addEventListener('submit', function(even
 
         // Redireciona para index.html
         console.log("Redirecionando para index.html");
-        window.location.href = '/pages/perfil.html';
+        window.location.href = 'perfil.html';
     };
 
     // Lê a imagem como Base64
