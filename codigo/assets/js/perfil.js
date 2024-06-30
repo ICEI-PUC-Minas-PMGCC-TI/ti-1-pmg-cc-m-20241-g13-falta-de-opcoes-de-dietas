@@ -45,9 +45,32 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+function verificaAdmin() {
+    let user = sessionStorage.getItem("usuarioCorrente");
+    user = JSON.parse(user);
+    if (user && user.login === "admin") {
+        console.log("Admin logado");
+        document.getElementById("cadastroReceitasContainer1").style.display = 'block';
+        document.getElementById("cadastroReceitasContainer2").style.display = 'block';
+    }
+}
+
+function verificaLogin() {
+    let user = sessionStorage.getItem("usuarioCorrente");
+    user = JSON.parse(user);
+    if (user && user.login !== "admin") {
+        console.log("Usuário não-admin está logado");
+        document.getElementById("containerLogin").style.display = 'none';
+        document.getElementById("containerPerfil").style.display = 'block';
+    } else {
+        console.log("Usuário não logado ou admin");
+    }
+}
 
 window.onload = function () {
     const usuarioJSON = localStorage.getItem('usuario');
+    verificaAdmin();
+    verificaLogin();
     
 
     if (usuarioJSON) {
@@ -248,3 +271,4 @@ function isFavorite(recipeId) {
 function displayMessage(msg) {
     alert(msg);
 }
+
