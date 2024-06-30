@@ -179,7 +179,7 @@ function cadastro(recipes) {
                     <h5 class="cardtext"><span class="titulopag">${recipe.name}</span></h5>
                     <p class="cardtext"><span class="pagtxt"> ${recipe.email}</span></p>
                     <p class="cardtext"><span class="pagtxt"> ${recipe.altura}</span></p>
-                    <p class="cardtext"><span class="pagtxt"> ${recipe.idade}</span></p>
+                    <p class="cardtext"><span class="pagtxt"> ${recipe.idade}</span>Anos</p>
                     <p class="cardtext"><span class="pagtxt"> ${recipe.telefone}</span></p>
                     <button class="favorite-btn" onclick="toggleFavorites(${recipe.id})">
                         <span class="heart-icon"></span>
@@ -253,7 +253,7 @@ function renderFavoriteItem(item) {
                     <button class="favorite-btn" onclick="toggleFavorite(${item.id})">
                         ${isFavorite(item.id) ? 'Desfavoritar' : 'Favoritar'}
                     </button>
-                    <button class="comment-btn" onclick="viewComments(${item.id})">
+                    <button class="comment-btn" onclick="window.location.href='/pages/exibMSG.html';">
                         Visualizar Comentários
                     </button>
                 </div>

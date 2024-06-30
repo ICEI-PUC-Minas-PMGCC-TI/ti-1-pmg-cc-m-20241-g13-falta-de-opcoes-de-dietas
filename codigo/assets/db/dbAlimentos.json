@@ -134,28 +134,28 @@
   ],
   "comentarios": [
     {
-      "nome": "Exemplo",
-      "texto": "Aaaa",
+      "nome": "Fit Flex",
+      "texto": "Obrigado por usar nosso site",
       "id": 0
     },
     {
-      "nome": "Teste",
+      "nome": "Alice",
       "texto": "Adorei a receita",
       "id": 1
     },
     {
-      "nome": "Matheus",
-      "texto": "Testando123",
+      "nome": "Iasmin",
+      "texto": "Não gostei",
       "id": 3
     },
     {
-      "nome": "Usuario Comum",
-      "texto": "a",
+      "nome": "Gabriel",
+      "texto": "Muito legal",
       "id": 5
     },
     {
       "nome": "Matheus de Almeida",
-      "texto": "teste",
+      "texto": "Vou experimentar",
       "id": 6
     }
   ]
